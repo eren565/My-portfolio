@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #b768f7, #5295ff, #00ffff);
+
+    color: white;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 35px;
+    background: linear-gradient(to bottom right, #a74cf255, #5691f02f);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s ease-in-out;
+}
+.navbar-brand{
+    font-family: "Gravitas One", serif;
+    text-shadow: 2px 1px 3px black;
+} 
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Wave Hover Effect */
+.wave-hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.wave-hover:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Background Animation */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background 1s ease-in-out;
+}
+
+/* Section Styling */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    transition: background 1s ease-in-out;
+}
+
+/* Background IMG*/
+
+
+
+/* Apply to navbar links */
+.nav-link {
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+/* Moving Gradient Background */
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(to bottom right, #b768f7, #5295ff, #00ffff);
+    background-size: 300% 300%;
+    z-index: -1;
+    transition: opacity 0.10s ease-in-out;
+    opacity: 0;
+}
+
+/* Animate Background on Hover */
+.nav-link:hover::before,
+.nav-link.active::before {
+    opacity: 10;
+    animation: moveGradient 3s infinite linear;
+}
+
+/* Keyframes: Moving Gradient Effect */
+@keyframes moveGradient {
+    0% {
+        background-position: top left;
+    }
+    50% {
+        background-position: center;
+    }
+    100% {
+        background-position: bottom right;
+    }
+}
+
+/* Make sure text stays above animation */
+.nav-link.active {
+    position: relative;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+
+
+/* Hero Section */
+
+
+/* Sections */
+.section h2{
+    position: relative;
+    top: -150px;
+}
+@media (max-width: 768px) {
+    .section h2{
+        position: relative;
+        top: 10px;
+    }
+}
+
+.container {
+    max-width: 900px;
+    padding: px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:20px ;
+}
+
+.card-1 {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 300px;
+}
+
+.card-1 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.animation-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+.animation-img img {
+    position: absolute;
+    box-shadow: #000000 2px 0px 11px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .animation-img {
+        position: relative;
+        margin-right: 150px;
+        top: -70px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .animation-img img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animation-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .animation-img img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 103vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(to bottom right, #b768f7, #5295ff, #00ffff);
+     color: white;
+}
+/* profile */
+.profile img{
+    border-radius: 101px;
+    border: 3px solid black;
+box-shadow: #000000 3px 2px 10px;}
+
+/* Section Styling */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Wave Hover Effect */
+.wave-hover {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+.wave-hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.wave-hover:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* text animetion */
+
+  /* Styling for the typing text */
+  #typing-text {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Cursor effect */
+#typing-text::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+.change-prof-name img {
+    width: 70px;  /* Ensure width and height are the same */
+    height:70px;
+    border: 2px solid black;
+    border-radius: 50%; /* Use 50% instead of 500px for a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circle properly */
+    display: block; /* Prevents inline spacing issues */
+}
+
+/* card slide and projects */
+
+card {
+    text-align: center;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .animated-bg {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right, #8900f9, #4675c0, #4625a9);
+    background-size: 300% 300%;
+    animation: colorChange 3s infinite alternate;
+  }
+  @keyframes colorChange {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+
+  /*  */
+
+
+  
+  .button-container {
+    margin-bottom: 20px;
+}
+.btn-custom {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: background 0.3s;
+}
+.btn-primary { background-color: #007bff; }
+.btn-success { background-color: #28a745; }
+.btn-warning { background-color: #ffc107; color: black; }
+.btn-danger { background-color: #dc3545; }
+.progress-container {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+}
+.progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.progress-circle svg {
+    transform: rotate(-90deg);
+}
+.progress-circle circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke 0.5s ease-in-out, stroke-dashoffset 1s ease-in-out;
+}
+.progress-circle .bg {
+    stroke: #e6e6e6;
+}
+.progress-circle .progress {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+}
+.progress-circle .text {
+    position: absolute;
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn-custom {
+        width: 100%;
+    }
+
+    .progress-container {
+        margin-top: 20px;
+    }
+
+    .progress-circle svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    #progress-text {
+        font-size: 16px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+    .hero{
+        margin-top: 100px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .button-container {
+        justify-content: space-between;
+    }
+
+    .btn-custom {
+        width: 48%;
+    }
+
+    .progress-circle svg {
+        width: 140px;
+        height: 140px;
+    }
+
+    #progress-text {
+        font-size: 18px;
+    } 
+    #blog{
+        margin-top: 60px;
+    }
+    .blog ul{
+        font-size: 5px;
+    }
+    #contact{
+        font-size: 10px;
+    }
+    #typing-text{
+        font-size: 15px;
+    }
+    .navbar-brand{
+        font-size: 5px;
+    }
+    .hero{
+        position: relative;
+        top: -100px;
+    }
+    #projects{
+        margin-top: 50px;
+    }
+}
+
+/* Large devices (desktops) */
+@media (max-width: 992px) {
+    .container {
+        width: 85%;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    .btn-custom {
+        width: auto;
+    }
+}

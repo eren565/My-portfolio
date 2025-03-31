@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Image Change</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <marquee
+      class="marquee-text"
+      behavior="scroll"
+      direction="left"
+      scrollamount="8"
+    >
+      🚀 Welcome to My Portfolio | Web Designer | Game Developer 🎮 | Video
+      Editor 🎬 | Photo Editor 📸 | Figma Designer 🎨 | WordPress Expert 🖥️ |
+      Frontend & Backend Developer | UI/UX Designer | Let's Create Something
+      Amazing! ✨
+    </marquee>
+
+    <div class="container">
+      <div class="change-prof-name">
+        <img id="profileImage" src="default.jpg" alt="Profile Image" />
+        <input
+          type="file"
+          id="fileInput"
+          accept="image/*"
+          style="display: none"
+        />
+      </div>
+
+      <div class="name-change">
+        <h2 id="displayName">User123 <i class="fa-solid fa-user-pen"></i></h2>
+
+        <div class="input-update" id="editContainer" style="display: none">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter Your Name"
+          /><br /><br />
+          <button id="saveButton">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal Line -->
+    <div class="line">
+      <hr />
+    </div>
+
+    <div class="container">
+        <div class="cantain">
+            <!-- Left Side: Cards -->
+            <div class="cards">
+                <div class="card-1">
+                    <input type="file" class="image-upload" style="display: none;">
+                    <img src="my_college.jpg" alt="Sahyadri College" class="editable-image"/>
+                    <h3 class="editable-text" contenteditable="true">Sahyadri College, Sangamner</h3>
+                    <p class="editable-text" contenteditable="true">One of the best colleges for engineering and technical studies.</p>
+                </div>
+                <div class="card-1">
+                    <input type="file" class="image-upload" style="display: none;">
+                    <img src="baap_company.jpg" alt="Baap Company" class="editable-image"/>
+                    <h3 class="editable-text" contenteditable="true">Baap Company</h3>
+                    <p class="editable-text" contenteditable="true">Innovative web and app development company.</p>
+                </div>
+            </div>
+        
+            <!-- Right Side: Triangle Images -->
+            <div class="triangle-images">
+                <input type="file" class="image-upload" style="display: none;">
+                <img src="image1.jpg" alt="Image 1" class="editable-image"/>
+                <input type="file" class="image-upload" style="display: none;">
+                <img src="image2.jpg" alt="Image 2" class="editable-image"/>
+                <input type="file" class="image-upload" style="display: none;">
+                <img src="image3.jpg" alt="Image 3" class="editable-image"/>
+            </div>
+              
+              <div class="btn-save">
+            <a href="../index.html"><button class="save-btn">Save Changes</button></a>
+            <button class="save-btn" onclick="window.location.href='saved.html'">View Saved</button>
+             </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

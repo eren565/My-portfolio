@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #b768f7, #5295ff, #00ffff);
+    margin-top: 130px;
+
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+.change-prof-name {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#profileImage:hover {
+    transform: scale(1.2);
+}
+.change-prof-name img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.change-prof-name img:hover, 
+.profile img:hover {
+    opacity: 0.8;
+}
+
+/* input */
+
+.name-change input{
+    height: 30px;
+    width: 230px;
+    margin-top: 15px;
+    border-radius: 19px;
+    padding-left: 8px;
+    border: none;
+    box-shadow: #2b98ff 2px 3px 5px;
+    background: linear-gradient(to top right, #007bff, #00ffff);
+}
+
+/*  */
+
+.name-change {
+    position: relative;
+    top: 40px;
+    text-align: center;
+    background: linear-gradient(to top right, #007bff, #00ffff);
+    padding: 5px;
+    width: 170px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.input-update h2{
+gap: 20px;
+}
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 40px;
+}
+
+h2 {
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.edit-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #007bff;
+    transition: 0.3s;
+}
+
+.edit-icon:hover {
+    color: #0056b3;
+}
+
+#editContainer input {
+    padding: px;
+    width: 160px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* maeque */
+.marquee-text {
+position: absolute;
+top: 5px;
+}
+/* hr line */
+hr{
+position: relative;
+width: 90%;
+top: 80px;
+}
+.line{display: flex;
+justify-content: center;
+}
+
+/* cards */
+
+ /* Right Side - Cards */
+  /* Profile Image */
+  .profile-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid #333;
+}
+
+#fileInput {
+    display: none;
+}
+
+.cantain {
+    margin-top: 150px;
+display: flex;
+    gap: 30px;
+}
+
+/* Left Side: Cards */
+.cards {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-1 {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+}
+
+.card-1 img {
+    width: 100%;
+    max-width: 290px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-1 h3, .card-1 p {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Right Side: Triangle Images */
+  /* Right Side: Triangle Images */
+  .triangle-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:   2fr ;
+    gap: 50px;
+    width: 50%;
+    position: relative;
+}
+
+.triangle-images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cantain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards, .triangle-images {
+        width: 90%;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cantain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards, .triangle-images {
+        width: 90%;
+    }
+}
+
+/* responcive */
+
+/* Responsive for Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .cantain {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 50px;
+    }
+    .cards,
+    .triangle-images {
+        width: 80%; /* Adjusted width */
+    }
+}
+
+/* Responsive for Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .cantain {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .cards,
+    .triangle-images {
+        width: 90%; /* Full width for smaller screens */
+    }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .cantain {
+        gap: 30px;
+    }
+    .cards,
+    .triangle-images {
+        width: 100%;
+    }
+    .card-1 img,
+    .triangle-images img {
+        width: 100%; /* Ensures images adjust to screen size */
+        max-width: 250px; /* Limits max size */
+    }
+}
+
+.save-btn{
+position: relative;
+right: 610px;
+top: 290px;
+display: flex;
+}
+.save-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
